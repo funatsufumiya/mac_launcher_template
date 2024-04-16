@@ -16,6 +16,7 @@ The following is what `launcher` does.
 
 ## How to use
 
+- Copy `launcher` to your favorite folder.
 - Place the Intel binary `binary_x64` and the M1/M2/M3 binary `binary_arm64` in the folder.
   - If you don't need to separate Intel/ARM, place the same content in two binaries.
   - The same applies if you only have the Intel version.
