@@ -1,0 +1,23 @@
+#!/bin/bash
+
+cd $(dirname $0)
+
+xattr -cr .
+
+# if arg arch given, use it
+if [ "$1" == "arm64" ]; then
+    ./binary_arm64
+    exit
+elif [ "$1" == "x64" ]; then
+    ./binary_x64
+    exit
+fi
+
+# check arch and launch the right binary
+if [ "$(uname -m)" == "aarch64" ]; then
+    ./binary_arm64
+elif [ "$(uname -m)" == "arm64" ]; then
+    ./binary_arm64
+else
+    ./binary_x64
+fi
